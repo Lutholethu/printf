@@ -9,37 +9,37 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int count = 0;
-
-	unsigned int s_count = 0;
+	unsigned int i, count = 0, s_count = 0;
 
 	va_list args;
 
 	va_start(args, format);
 
-	for (count = 0; format[count] != '\0'; count++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[count] != '%')
+		if (format[i] != '%')
 		{
-			putchar (format[count]);
-		}
-		if (format[count] == '%' && format[count + 1] == 'c')
-		{
-			putchar(va_arg(args, int));
+			putchar (format[i]);
 			count++;
 		}
-		else if (format[count + 1] == 's')
+		else if (format[i] == '%' && format[i + 1] == 'c')
+		{
+			putchar(va_arg(args, int));
+			i++;
+			count++;
+		}
+		else if (format[i + 1] == 's')
 		{
 			char *str = va_arg(args, char *);
 			s_count = _puts(str);
-			count++;
+			i++;
 			count += (s_count - 1);
 		}
-		else if (format[count + 1] == '%')
+		else if (format[i + 1] == '%')
 		{
 			putchar('%');
+			count++;
 		}
-		count += 1;
 
 	}
 
