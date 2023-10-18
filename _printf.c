@@ -42,11 +42,10 @@ int _printf(const char *format, ...)
 		else if (format[i + 1] == '%')
 		{
 			putchar('%');
+			count++;
 		}
 		count += 1;
-
 	}
 	va_end(args);
 	return (count);
-
 }
