@@ -12,6 +12,11 @@ int _puts(char *c);
 int _printf_string(va_list val);
 unsigned int _strlen(const char *str);
 int print_percentage(void);
+int _print_dec(va_list args);
+int _print_number(va_list args);
+int print_binary(va_list val);
+int _print_unsigned(va_list args);
+int print_octal(va_list val);
 
 #endif
 
