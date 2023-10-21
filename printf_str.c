@@ -12,7 +12,7 @@ int printf_str(va_list val)
 	int i, len = 0;
 	int value;
 
-	s = va_arg(args, char *);
+	s = va_arg(val, char *);
 	if ( s == NULL)
 		s = "(NULL)";
 	for (i = 0; s[i] != '\0'; i++)
