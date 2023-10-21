@@ -17,6 +17,10 @@ int _print_number(va_list args);
 int print_binary(va_list val);
 int _print_unsigned(va_list args);
 int print_octal(va_list val);
+int print_hex(va_list val);
+int print_Hex(va_list val);
+int printf_str(va_list val);
+int print_HEX(unsigned int num);
 
 #endif
 
