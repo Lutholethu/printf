@@ -19,6 +19,7 @@ int _print_number(va_list args)
 		n = -n;
 		num = -num;
 		_putchar('-');
+		last = -last;
 		i++;
 
 	}
@@ -39,7 +40,7 @@ int _print_number(va_list args)
 		 exp = exp / 10;
 		 i++;
 	}
-	_putchar((last + '0');
+	_putchar(last + '0');
 	return (i);
 }
 
@@ -64,6 +65,7 @@ int _print_dec(va_list args)
 		n = -n;
 		num = -num;
 		_putchar('-');
+		last = -last;
 		i++;
 
 	}
@@ -84,6 +86,6 @@ int _print_dec(va_list args)
 		exp = exp / 10;
 		i++;
 	}
-	_putchar((last + '0');
+	_putchar(last + '0');
 			return (i);
 }

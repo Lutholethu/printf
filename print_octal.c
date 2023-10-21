@@ -1,7 +1,8 @@
-3include "main.h"
+#include "main.h"
 /**
  * print_octal - converts to octal
  * @val: variable parameter
+ * @num: number 
  * Return: counter
  */
 
@@ -9,6 +10,7 @@ int print_octal(va_list val)
 {
 	int i, counter = 0;
 	int *array;
+	unsigned int tem = num;
 	unsigned int num = va_arg(val, unsigned int);
 
 	while (num / 8 != 0)
@@ -17,7 +19,7 @@ int print_octal(va_list val)
 		counter++;
 	}
 	counter++;
-	array = malloc(sozeof(int) * counter);
+	array = malloc(sizeof(int) * counter);
 
 	for ( i = 0; i < counter; i++)
 	{

@@ -8,7 +8,7 @@
 int print_binary(va_list val)
 {
 	int flag = 0;
-	int i, a = i, b;
+	int i, a = 1, b;
 	int count = 0;
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int p;
