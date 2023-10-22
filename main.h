@@ -5,6 +5,13 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stdio.h>
+#include <limits.h>
+
+typedef struct format
+{
+	char *id;
+	int (*f)();
+} match;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
@@ -21,6 +28,8 @@ int print_hex(va_list val);
 int print_Hex(va_list val);
 int printf_str(va_list val);
 int print_HEX(unsigned int num);
+int print_revs(va_list val);
+int print_rot13(va_list val);
 
 #endif
 
